@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vishnunarayanan.dbapplication.MainActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <EditText
+                android:id="@+id/inputTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:width="300dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="37dp" />
+
+            <EditText
+                android:id="@+id/inputZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/inputY"
+                android:layout_marginTop="15dp"
+                android:width="300dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="241dp" />
+
+            <EditText
+                android:id="@+id/inputY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputX"
+                android:layout_marginTop="15dp"
+                android:width="300dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="165dp" />
+
+            <Button
+                android:id="@+id/addRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputZ"
+                android:layout_marginTop="15dp"
+                android:onClick="addRecordClicked"
+                android:text="Add record"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="336dp" />
+
+            <EditText
+                android:id="@+id/inputX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/inputTime"
+                android:layout_marginTop="15dp"
+                android:width="300dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="104dp" />
+
+            <Button
+                android:id="@+id/getTenButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/addRecord"
+                android:layout_alignBottom="@+id/addRecord"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="49dp"
+                android:onClick="getTopTenRecords"
+                android:text="Get Ten" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/resultText"
+                android:layout_marginStart="11dp"
+                android:layout_toEndOf="@+id/addRecord"
+                android:onClick="deleteRecords"
+                android:text="Delete" />
+
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addRecord"
+                android:layout_centerHorizontal="true"
+                android:text="TextView"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                app:layout_constraintStart_toEndOf="@+id/addRecord"
+                tools:layout_editor_absoluteY="336dp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
